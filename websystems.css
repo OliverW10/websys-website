@@ -13,29 +13,35 @@ body > input {
 
 input + #container{
     --backgroundColour: #fff7f0;
+    --lightBackgroundColour: #ccc5c0;
     --textColour: black;
     --fadeTextColour: #bbbbbb;
+    --featureColour1: fuchsia;
+    --featureColour2: orange;
 }
 
 input:checked + #container{
     --backgroundColour: #122030;
+    --lightBackgroundColour: #223344;
     --textColour: white;
     --fadeTextColour: #334455;
+    --featureColour1: fuchsia;
+    --featureColour2: purple;
 }
 
 #container {
     color: var(--textColour);
     transition: color var(--fadeTime);
+    margin: 0px;
 }
 
 body{
     overflow: hidden;
-    /* color: white; */
+    margin: 0px;
 }
 
 #bg{
     background-color: var(--backgroundColour);
-    /* background-color: yellow; */
     position: absolute;
     left: 0;
     top: 0;
@@ -43,13 +49,21 @@ body{
     height: 100%;
     z-index: -1;
     transition: background-color var(--fadeTime);
+    /* super blurred low res image as background? */
 }
 
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border: 1px solid var(--textColour);
+    border-top: 0px;
+    height: 2.7em;
+    margin: 0;
+    z-index: 0;
 }
+
+/* TODO: fix wrapping on header */
 
 #linksSpan {
     display: flex;
@@ -57,9 +71,20 @@ header {
 }
 
 #headerSpan > * {
-    padding: 10px;
+    position: relative;
+    padding: 1em;
+    height: 50px;
+    padding-top: 15px;
     border: solid 1px var(--textColour);
-    margin-left: -1px;
+    top: 0.5em;
+    transition: top var(--fadeTime);
+    z-index: 1;
+    background-color: var(--backgroundColour);
+    user-select: none;
+}
+
+#headerSpan > *:hover{
+    top: 0.8em;
 }
 
 #colourChangeBtn {
