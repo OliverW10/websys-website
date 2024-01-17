@@ -38,6 +38,7 @@ input:checked + #container{
 body{
     overflow: hidden;
     margin: 0px;
+    font-family: serif;
 }
 
 #bg{
@@ -80,7 +81,8 @@ header {
     transition: top var(--fadeTime);
     z-index: 1;
     background-color: var(--backgroundColour);
-    user-select: none;
+    text-decoration: none;
+    color: var(--textColour);
 }
 
 #headerSpan > *:hover{
@@ -97,4 +99,14 @@ header {
 
 #colourBtn:hover {
     background-color: var(--fadeTextColour);
+}
+
+.btn {
+    user-select: none;
+    cursor: pointer;
+}
+
+.btn {
+    user-select: none;
+    cursor: pointer;
 }
