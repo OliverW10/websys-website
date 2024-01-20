@@ -27,8 +27,8 @@ input:checked + #container{
     --textColour: white;
     --fadeTextColour: #334455;
     --featureColour1: fuchsia;
-    --featureColour2: purple;
-    --buttonColour: pink;
+    --featureColour2: navy;
+    --buttonColour: purple;
 }
 
 #container {
@@ -38,7 +38,6 @@ input:checked + #container{
 }
 
 body{
-    overflow: hidden;
     margin: 0px;
     font-family: serif;
 }
@@ -52,7 +51,6 @@ body{
     height: 100%;
     z-index: -1;
     transition: background-color var(--fadeTime);
-    /* super blurred low res image as background? */
 }
 
 header {
@@ -63,6 +61,7 @@ header {
     margin: 0;
     z-index: 0;
     background-color: var(--backgroundColour);
+    border-bottom: 1px solid var(--fadeTextColour);
 }
 
 /* TODO: fix wrapping on header */
@@ -90,6 +89,7 @@ header > span {
 
 #colourBtn {
     transition: background-color var(--fadeTime);
+    color: var(--featureColour1);
 }
 
 #colourBtn:hover {
@@ -104,6 +104,7 @@ header > span {
 
     background-color: var(--backgroundColour);
     background-clip: border-box;
+
 }
 
 #heroDiv {
@@ -112,8 +113,7 @@ header > span {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('bayer_matrix-ex.png') left top repeat, linear-gradient(45deg, var(--featureColour2) 0%, var(--featureColour1) 100%);
-    background-size: 300px, 100%;
+    background: linear-gradient(45deg, var(--featureColour2) 0%, var(--featureColour1) 100%);
 }
 
 h1 {
@@ -121,8 +121,43 @@ h1 {
     font-weight: bolder;
     font-size: 400%;
     z-index: 1;
-    padding: 25px;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    border-radius: 20px;
+}
+
+
+kbd{
+    border-radius: 3px;
+    padding: 1px 2px 0;
+    border: 1px solid gray;
+}
+
+hr {
+    /* border: 0px;
+    background: linear-gradient(to right, var(--featureColour2), var(--featureColour1));
+    height: 5px; */
+    margin: 30px;
+}
+
+.heroImg {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 30vw;
+    transition: filter 0.3s, top 0.3s, left 0.3s;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.heroImg:hover {
+    filter: drop-shadow(-10px -10px 1px var(--buttonColour));
+    top: 5px;
+    left: 5px;
+}
+
+.hidden {
+    opacity: 0%;
+    width: 30vw;
+}
+
+.underscored {
+    border-bottom: 5px solid var(--buttonColour)
 }
