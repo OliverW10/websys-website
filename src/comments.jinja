@@ -3,10 +3,30 @@
 {% block title %}Comments{% endblock %}
 
 {% block content %}
-    problems with making the page
-    <ul>
-        <li>header height would not behave - forgot what fixed it</li>
-        <li>couldnt get dark mode to save across pages without js</li>
-        <li>getting the background to work</li>
-    </ul>
+<div id="content">
+    <h2>Comments</h2>
+    <p>problems with making the page</p>
+    <table>
+        <tr>
+            <th>Problem</th>
+            <th>Solution</th>
+        </tr>
+        <tr>
+            <td>The Span that holds the navigation header buttons was not being the correct height</td>
+            <td>Change the min-height property to be fit-content</td>
+        </tr>
+        <tr>
+            <td>Dark Mode without javascript</td>
+            <td>Used an invisible checkbox input and the :checked css psudo-specifier to set colour variables that the rest of the page uses.</td>
+        </tr>
+        <tr>
+            <td>Adding a hover effect to the clock on the past page</td>
+            <td>Using a drop-shadow css property put a box around the whole rectangle, instead used filter: drop-shadow</td>
+        </tr>
+        <tr>
+            <td>Stressin</td>
+            <td>Chilled out</td>
+        </tr>
+    </table>
+</div>
 {% endblock %}

@@ -89,7 +89,7 @@ header > span {
 
 #colourBtn {
     transition: background-color var(--fadeTime);
-    color: var(--featureColour1);
+    color: var(--buttonColour);
 }
 
 #colourBtn:hover {
@@ -148,9 +148,9 @@ hr {
 }
 
 .heroImg:hover {
-    filter: drop-shadow(-10px -10px 1px var(--buttonColour));
-    top: 5px;
-    left: 5px;
+    filter: drop-shadow(1vw 1vw 3px var(--buttonColour));
+    top: -0.5vw;
+    left: -0.5vw;
 }
 
 .hidden {
@@ -160,4 +160,17 @@ hr {
 
 .underscored {
     border-bottom: 5px solid var(--buttonColour)
+}
+
+th {
+    /* background-color: var(--featureColour2); */
+}
+
+td, th, table {
+    border: 1px solid var(--textColour);
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: var(--fadeTextColour);
 }
