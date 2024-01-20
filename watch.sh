@@ -1,2 +1,2 @@
-ls src/* | entr -s './build.sh' &
+ls src/* | entr -s 'make' &
 (cd out && python3 -m http.server)

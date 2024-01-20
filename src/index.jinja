@@ -1,13 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="websystems.css">
-    <title>Document</title>
-</head>
-<body>
-    {% include 'header.jinja' %}
-    <p class="coloured">Content!!</p>
-</body>
-</html>
+{% extends "base.jinja" %}
+
+{% block title %}Index{% endblock %}
+{% block titleDisplay %}Index{% endblock %}
+
+{% block content %}
+        <div id="heroDiv">
+            <h1>Home Page</h1>
+        </div>
+        <div id="content">
+            <p>
+                This is a website created for the websystems class. This is the index page
+            </p>
+            <h3>About me</h3>
+            <p>Some facts about me are:</p>
+            <ol>
+                <li>Undefeated 2 time world champion at chilling</li>
+                <li>8x Olymic Gold medal for kicking back</li>
+                <li>World number 1 in dope-ness and overall </li>
+
+            </ol>
+        </div>
+{% endblock %}

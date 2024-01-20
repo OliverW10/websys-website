@@ -12,12 +12,13 @@ body > input {
 }
 
 input + #container{
-    --backgroundColour: #fff7f0;
+    --backgroundColour: #fff8f4;
     --lightBackgroundColour: #ccc5c0;
     --textColour: black;
     --fadeTextColour: #bbbbbb;
-    --featureColour1: fuchsia;
-    --featureColour2: orange;
+    --featureColour1: #f3d;
+    --featureColour2: #fe1;
+    --buttonColour: rgb(241, 157, 0);
 }
 
 input:checked + #container{
@@ -27,6 +28,7 @@ input:checked + #container{
     --fadeTextColour: #334455;
     --featureColour1: fuchsia;
     --featureColour2: purple;
+    --buttonColour: pink;
 }
 
 #container {
@@ -57,40 +59,33 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 1px solid var(--textColour);
     border-top: 0px;
-    height: 2.7em;
     margin: 0;
     z-index: 0;
+    background-color: var(--backgroundColour);
 }
 
 /* TODO: fix wrapping on header */
 
-#linksSpan {
+header > span {
     display: flex;
-    flex-direction: row;
+    align-items: center;
 }
 
-#headerSpan > * {
-    position: relative;
+.headerBtn {
     padding: 1em;
-    height: 50px;
-    padding-top: 15px;
-    border: solid 1px var(--textColour);
-    top: 0.5em;
-    transition: top var(--fadeTime);
-    z-index: 1;
     background-color: var(--backgroundColour);
-    text-decoration: none;
     color: var(--textColour);
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    transition: background-colour var(--fadeTime), color var(--fadeTime);
+    font-weight: bold;
 }
 
-#headerSpan > *:hover{
-    top: 0.8em;
-}
-
-#colourChangeBtn {
-    padding: 10px;
+.headerBtn:hover{
+    background-color: var(--buttonColour);
+    color: var(--backgroundColour);
 }
 
 #colourBtn {
@@ -101,12 +96,33 @@ header {
     background-color: var(--fadeTextColour);
 }
 
-.btn {
-    user-select: none;
-    cursor: pointer;
+
+#content {
+    padding-left: 20vw;
+    padding-right: 20vw;
+    margin-top: 0px;
+
+    background-color: var(--backgroundColour);
+    background-clip: border-box;
 }
 
-.btn {
-    user-select: none;
-    cursor: pointer;
+#heroDiv {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('bayer_matrix-ex.png') left top repeat, linear-gradient(45deg, var(--featureColour2) 0%, var(--featureColour1) 100%);
+    background-size: 300px, 100%;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 400%;
+    z-index: 1;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
 }
