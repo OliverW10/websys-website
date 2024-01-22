@@ -8,4 +8,5 @@ website: $(PAGES)
 	cp src/past.svg out/past.svg
 
 out/%.html: src/%.jinja Makefile
+	mkdir -p out/
 	jinja2 $< > $@
