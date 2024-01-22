@@ -121,6 +121,7 @@ h1 {
     font-weight: bolder;
     font-size: 400%;
     z-index: 1;
+    margin-bottom: 5px;
 }
 
 
@@ -134,21 +135,25 @@ hr {
     /* border: 0px;
     background: linear-gradient(to right, var(--featureColour2), var(--featureColour1));
     height: 5px; */
-    margin: 30px;
+    margin-left: 5%;
+    margin-right: 60%;
+    color: var(--buttonColour);
+    background-color: var(--buttonColour);
+    height: 3px;
 }
 
 .heroImg {
     margin-left: 15vw;
     margin-right: 15vw;
     width: 30vw;
-    transition: filter 0.3s, top 0.3s, left 0.3s;
+    transition: filter 1s, top 1s, left 1s;
     position: relative;
     top: 0px;
     left: 0px;
 }
 
 .heroImg:hover {
-    filter: drop-shadow(1vw 1vw 3px var(--buttonColour));
+    filter: drop-shadow(1vw 1vw 1px var(--buttonColour));
     top: -0.5vw;
     left: -0.5vw;
 }
@@ -159,6 +164,8 @@ hr {
 }
 
 .underscored {
+    border: 1px solid var(--fadeTextColour);
+    border-radius: 3px;
     border-bottom: 5px solid var(--buttonColour)
 }
 
