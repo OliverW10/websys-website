@@ -44,7 +44,7 @@ body{
 
 #bg{
     background-color: var(--backgroundColour);
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -108,7 +108,7 @@ header > span {
 }
 
 #heroDiv {
-    width: 100vw;
+    /* width: 100vw; */
     height: 50vh;
     display: flex;
     align-items: center;
@@ -162,10 +162,6 @@ kbd{
     border-bottom: 5px solid var(--buttonColour)
 }
 
-th {
-    /* background-color: var(--featureColour2); */
-}
-
 td, th, table {
     border: 1px solid var(--textColour);
     border-collapse: collapse;
@@ -173,4 +169,10 @@ td, th, table {
 
 tr:nth-child(even) {
     background-color: var(--fadeTextColour);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
