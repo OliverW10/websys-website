@@ -4,7 +4,7 @@
 {% block titleDisplay %}Index{% endblock %}
 
 {% block content %}
-        <div id="heroDiv">
+        <div id="heroDiv" class="centerChildren">
             <h1>Home Page</h1>
         </div>
         <div id="content">
@@ -61,8 +61,11 @@ A shelter for all, where spirits embrace?
             <h3>Image</h3>
             <p>Here is the first image that appeared when I googled 'image'</p>
             <figure>
-                <img src="image.jpg" width="500px" alt="Image of old phone taking picture of a path and overpass">
-                <figcaption>Creative Commons 3.0 - Olaf Simons</figcaption>
+                <img src="image.jpg" width="50%" class="centerChildren" alt="Image of old phone taking picture of a path and overpass">
+                <figcaption>
+                    Creative Commons 3.0 - Olaf Simons
+                    <a href="https://commons.wikimedia.org/wiki/File:Image_created_with_a_mobile_phone.png">Source</a>
+                </figcaption>
             </figure>
         </div>
 {% endblock %}

@@ -5,28 +5,26 @@
 {% block content %}
 <div id="content">
     <h1 class="pageHeading">Comments</h1>
-    <p>problems with making the page</p>
-    <table>
-        <tr>
-            <th>Problem</th>
-            <th>Solution</th>
-        </tr>
-        <tr>
-            <td>The Span that holds the navigation header buttons was not being the correct height</td>
-            <td>Change the min-height property to be fit-content</td>
-        </tr>
-        <tr>
-            <td>Dark Mode without javascript</td>
-            <td>Used an invisible checkbox input and the :checked css psudo-specifier to set colour variables that the rest of the page uses.</td>
-        </tr>
-        <tr>
-            <td>Adding a hover effect to the clock on the past page</td>
-            <td>Using a drop-shadow css property put a box around the whole rectangle, instead used filter: drop-shadow</td>
-        </tr>
-        <tr>
-            <td>Stressin</td>
-            <td>Chilled out</td>
-        </tr>
-    </table>
+    <h2>Reflection</h2>
+    <p>I thought the overall design of the website met my goals, both aesthetically and technically. The design is functional and has a nice simple aesthetic that is consistant across the pages and it is easy to use and structured in a way that makes it easy to work on.</p>
+    <h2>Technical details</h2>
+    <p>The website is split into five html files, four for the four pages: index, future, past and comments. And a base page template which contains the header and footer and is copied to all the others, during development this process of copying the templates was automated to save time when iterating.</p>
+    <p>The header consists of 4 <code>&lt;a&gt;</code> tags inside a span tag inside a header tag, which is layed out using the <code>display: flex;</code> css attribute.</p>
+    <p>CSS id were used extensively to style specific elements of the page without effecting other elements that may be of the same type. Id's were reused across the pages when I wanted elements to have the same appearence, such as the #content id which was used on all the pages for the div that contained all content. This css was shared between the pages beacuse all the css is in a single .css file which is used by all the pages.</p>
+    <p>CSS classes were used to share styles between multiple elements on the same page, for example the .headerBtn class was used to style the header buttons and the .centerChildren class was used in a number of places to center the child elements.</p>
+    <p>Another technical feature that was created was the dark-mode button, its function was to changes all the colours on the page to be in dark mode by using a different colour pallete, this was achived by using css variables whenever an element was styled with a colour and then using an checkbox input to store the state of if it was dark mode, making the effect work entirely without javascript. Unfortunetly this feature had to be removed for the submitted website because the automated marking on ed did not support css variables, despite the fact they have been supported by every browser since 2015.</p>
+    <h2>Aesthetics</h2>
+    <p>The overall design of the website was intended to be minimalist with pops of vibrant colours and a focus on the content.</p>
+    <p>To achive this design I used a simple colour pallete and clean, simple shapres. The simplicity was meant to look modern but also required that all the positioning lined up and the colours matched.
+        I tried to keep the colour palette reduced just a few colours, primiarly using a warm white for the background with orange accents and features throughout the page, for example the underlines under page titles and the hover effect over the nav-bar's buttons.
+        Specifically for the nav bar I wanted to have a colourful hover effect, however to maintain readable text I had to also make the text colour swap from black to white to give it more contrast against the dark orange that was chosen for the accent colour.
+        To make the content the focus of the page and to make reading easier I made the content width only span part of the page horizontally and centered it, giving it lots of space to either side, this was intended to make the content easier to read and give the page a more centered feel when compared with just keeping all the content on the far left of the page.
+    </p>
+    <p>I also experimented with box shadows, rounded borders, blurring, a greater variety of colours. All of which was removed because it did not fit the vibe</p>
+    <h2>Accessability</h2>
+    <p>While designing the website several steps were taken to make the website more accessable.</p>
+    <p>For starters the text and background colours were chosen to provide high contrast, not only for the content but also for heading, navigation buttons and images. This helps both those with reduced vision and those without to see what is on the website easier.</p>
+    <p>The second way in which the website was made more accessable was by making correct and thourough use of semantic html tags to make the website easier to understand for screen readers, the correct use of tags make mean that screen readers can provide more context about the content and helps with understanding.</p>
+    <p>Thirdly all images and diagrams were given alt text to help with screen readers, in addition to this the navigation items and other inputs were given tabindex to allow navigation for those who either cannot use the mouse effectively or for the nerds avoid using the mouse for some reason.</p>
 </div>
 {% endblock %}
