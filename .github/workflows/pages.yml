@@ -28,14 +28,14 @@ jobs:
         pip install -r requirements.txt
     - name: Build Website
       run: |
-        make
+        python3 build.py
     - name: Setup Pages
       uses: actions/configure-pages@v3
     - name: Upload Artifact
       uses: actions/upload-pages-artifact@v2
       with:
         # upload entire directory
-        path: 'out/'
+        path: 'src/'
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v2

@@ -1,7 +1,5 @@
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-import shutil
-import glob
 
 env = Environment(
     loader=FileSystemLoader("src"),

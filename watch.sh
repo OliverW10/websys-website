@@ -1,2 +1,2 @@
-ls src/* | entr -s 'make' &
-(cd out && python3 -m http.server)
+ls src/* | entr -s 'python3 build.py' &
+(cd src && python3 -m http.server)
